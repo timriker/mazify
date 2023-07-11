@@ -25,28 +25,28 @@
 
 <body style="background-color: #222222">
   <div id="loader" class="lds-dual-ring centered"></div>
-  <a-scene fog="type: linear; color: #111; far: 24; near: 10" style="display: none;">
+  <a-scene fog="type: linear; color: #111; far: 100; near: 10" style="display: none;">
     <!-- Assets -->
     <a-assets>
       <img id="pavement" src="assets/pavement.jpg" alt="pavement" />
       <img id="brick-02" src="assets/brick-02.jpg" alt="brick-02" />
-      <img id="ball" src="assets/ball.jpg" alt="ball" />
-      <img id="red-carpet" src="assets/red-carpet.jpg" alt="red-carpet" />
+      <!-- <img id="ball" src="assets/ball.jpg" alt="ball" /> -->
+      <!-- <img id="red-carpet" src="assets/red-carpet.jpg" alt="red-carpet" /> -->
       <img id="start" src="assets/start.jpg" alt="start" />
       <img id="finish" src="assets/finish.jpg" alt="finish" />
     </a-assets>
 
     <!-- Environment -->
     <a-sky height="2048" color="#111" width="2048"></a-sky>
-    <a-light type="ambient" color="#fff" intensity="0.8"></a-light>
+    <a-light type="ambient" color="#fff" intensity="0.1"></a-light>
     <a-plane material="src: #pavement; repeat: 50 50" static-body rotation="-90 0 0" height="100" width="100"></a-plane>
 
     <!-- Player -->
     <!-- <a-entity id="player" camera="user-height: 1.7" universal-controls kinematic-body listener player>
     </a-entity> -->
-    <a-entity id="player" position="25 1 0">
+    <a-entity id="rig" movement-controls kinematic-body="enableJumps: true;" position="25 1.6 0">
         <a-entity id="camera" camera look-controls></a-entity>
-        <a-light type="point" color="#fff" intensity="0.8"></a-light>
+        <a-light type="point" color="#fff" intensity="0.4"></a-light>
     </a-entity>
 
     <!-- Maze -->
@@ -81,7 +81,7 @@
     </div>
   </div>
 
-  <!-- The Modal -->
+  <!-- The Finish Modal -->
   <div id="finishDialog" class="modal mazify" style="display: none;">
     <!-- Modal content -->
     <div class="modal-content">
