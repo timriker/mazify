@@ -89,9 +89,9 @@ AFRAME.registerComponent("mazify", {
                     tile.setAttribute('static-body', '');
                     tile.setAttribute('id', 'start-tile');
 
-                    let player = document.querySelector("#player");
-                    let playerPos = player.getAttribute("position");
-                    player.setAttribute('position', { x: position.x, y: playerPos.y, z: position.z })
+                    let rig = document.querySelector("#rig");
+                    let rigPos = rig.getAttribute("position");
+                    rig.setAttribute('position', { x: position.x, y: rigPos.y, z: position.z })
                 } else if (mazeData.data[i] == 'f') {
                     let tile = document.createElement('a-box');
                     el.appendChild(tile);
