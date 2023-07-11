@@ -29,6 +29,8 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.27.9",
-    "five-server": "^0.1.3"
+    "five-server": "^0.1.3",
+    "aframe": "^1.4.2",
+    "aframe-extras": "^7.0.0"
   }
 }

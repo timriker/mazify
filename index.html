@@ -4,8 +4,8 @@
 <head>
   <title>Mazify 3D</title>
   <meta name="description" content="Mazify 3D" />
-  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
+  <script src="node_modules/aframe/dist/aframe.js"></script>
+  <script src="node_modules/aframe-extras/dist/aframe-extras.js"></script>
   <script src="js/mazify.js"></script>
   <script type="module">
     import { reset, cont, level1, level2, levelRand, load } from './js/controls.js'
@@ -42,7 +42,11 @@
     <a-plane material="src: #pavement; repeat: 50 50" static-body rotation="-90 0 0" height="100" width="100"></a-plane>
 
     <!-- Player -->
-    <a-entity id="player" camera="user-height: 1.7" universal-controls kinematic-body listener player>
+    <!-- <a-entity id="player" camera="user-height: 1.7" universal-controls kinematic-body listener player>
+    </a-entity> -->
+    <a-entity id="player" position="25 1 0">
+        <a-entity id="camera" camera look-controls></a-entity>
+        <a-light type="point" color="#fff" intensity="0.8"></a-light>
     </a-entity>
 
     <!-- Maze -->
@@ -65,7 +69,6 @@
         <p><strong>Right:</strong> Right Arrow / D</p>
         <p><strong>Jump:</strong> Space</p>
         <p><strong>Exit/Pause:</strong> Escape (press twice)</p>
-
       </div>
       <div class="modal-footer">
         <h3>Select Level:</h3>
