@@ -5,7 +5,7 @@ AFRAME.registerComponent("player", {
             // Jump
             if (event.code === 'Space') {
                 let player = document.querySelector("#player");
-                if (player.getAttribute("position").y <= 2) { // prevent successive jump
+                if (player.getAttribute("position").y <= 4) { // prevent successive jump
                     player.setAttribute('velocity', '0 12 0');
                 }
             }
