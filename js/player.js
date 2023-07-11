@@ -23,4 +23,3 @@ AFRAME.registerComponent("player", {
     }
 })
 
-
