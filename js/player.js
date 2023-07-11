@@ -1,12 +1,12 @@
 
-AFRAME.registerComponent("player", {
+AFRAME.registerComponent("rig", {
     init: function () {
         document.addEventListener('keydown', event => {
             // Jump
             if (event.code === 'Space') {
-                let player = document.querySelector("#player");
-                if (player.getAttribute("position").y <= 4) { // prevent successive jump
-                    player.setAttribute('velocity', '0 12 0');
+                let rig = document.querySelector("#rig");
+                if (rig.getAttribute("position").y <= 4) { // prevent successive jump
+                    rig.setAttribute('velocity', '0 12 0');
                 }
             }
         })
@@ -22,4 +22,3 @@ AFRAME.registerComponent("player", {
         });
     }
 })
-
