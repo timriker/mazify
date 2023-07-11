@@ -1,7 +1,6 @@
 import { randomGeneration } from "./randMaze.js";
 import levels from "./levels.js";
 
-
 export function reset() {
     location.reload();
 }
@@ -26,7 +25,7 @@ export function level2() {
 
 export function levelRand() {
     let mazeElm = document.querySelector("[mazify]");
-    mazeElm.setAttribute("mazify", { height: 20, width: 20, maze: randomGeneration() }, true)    
+    mazeElm.setAttribute("mazify", { height: 20, width: 20, maze: randomGeneration() }, true)
 }
 
 export function load() {
