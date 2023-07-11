@@ -32,7 +32,7 @@ AFRAME.registerComponent("mazify", {
         // first remove old children if-any
         let oldChildren = this.el.querySelectorAll("a-box");
 
-        if (oldChildren) {            
+        if (oldChildren) {
             oldChildren.forEach(element => {
                 this.el.removeChild(element);
             });
@@ -46,7 +46,7 @@ AFRAME.registerComponent("mazify", {
         }
 
         const maze_size = 3;
-        const maze_height = 12;
+        const maze_height = 2;
         const el = this.el;
 
         for (var x = 0; x < mazeData.height; x++) {
@@ -56,7 +56,7 @@ AFRAME.registerComponent("mazify", {
 
                 const position = {
                     x: ((x - (mazeData.width / 2)) * maze_size),
-                    y: 1.5,
+                    y: maze_height / 2,
                     z: (y - (mazeData.height / 2)) * maze_size
                 };
 
@@ -71,7 +71,7 @@ AFRAME.registerComponent("mazify", {
 
 
                     wall.setAttribute('color', '#fff');
-                    wall.setAttribute('material', 'src: #brick-02; repeat: 2 4');
+                    wall.setAttribute('material', 'src: #brick-02; repeat: 1 1');
                     wall.setAttribute('static-body', '');
                 }
                 else if (mazeData.data[i] == 's') {
