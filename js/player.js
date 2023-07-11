@@ -1,7 +1,7 @@
 
 AFRAME.registerComponent("player", {
     init: function () {
-        document.addEventListener('keyup', event => {
+        document.addEventListener('keydown', event => {
             // Jump
             if (event.code === 'Space') {
                 let player = document.querySelector("#player");
