@@ -7,14 +7,14 @@
   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
   <script src="js/mazify.js"></script>
-  <script type="module">    
+  <script type="module">
     import { reset, cont, level1, level2, levelRand, load } from './js/controls.js'
     window.cont = cont; //TODO: avoid this in future
     window.reset = reset;
     window.level1 = level1
     window.level2 = level2;
-    window.levelRand = levelRand; 
-    window.load = load; 
+    window.levelRand = levelRand;
+    window.load = load;
   </script>
   <script src="js/controls.js" type="module"></script>
   <script src="js/player.js"></script>
@@ -70,7 +70,7 @@
       <div class="modal-footer">
         <h3>Select Level:</h3>
         <button class="button" onclick="load()">Load</button>
-        <button class="button" onclick="level1()">Level 1</button>        
+        <button class="button" onclick="level1()">Level 1</button>
         <button class="button" onclick="level2()">Level 2</button>
         <button class="button" onclick="levelRand()">Random</button>
         <button class="button" onclick="cont()">Play</button>
